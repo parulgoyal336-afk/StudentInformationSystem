@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8fafc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+        }
+        .card-header {
+            background-color: #0f172a !important;
+            color: white;
+            border-top-left-radius: 12px !important;
+            border-top-right-radius: 12px !important;
+            padding: 20px;
+        }
+        .btn-primary {
+            background-color: #2563eb;
+            border: none;
+            padding: 10px;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: background-color 0.2s;
+        }
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+        }
+        .form-control, .form-select {
+            border-radius: 8px;
+            padding: 10px;
+            border: 1px solid #cbd5e1;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-light d-flex align-items-center py-5 min-vh-100">
+    <div class="container" style="max-width: 550px;">
+        <div class="card shadow">
+            <div class="card-header text-center">
+                <h3 class="mb-0 fw-bold">Student Registration Portal</h3>
+            </div>
+            <div class="card-body p-4">
+                <form action="display.jsp" method="POST">
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold text-secondary">Student Name:</label>
+                        <input type="text" name="studentName" class="form-control" placeholder="Enter full name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold text-secondary">Roll Number:</label>
+                        <input type="text" name="rollNo" class="form-control" placeholder="Enter roll number" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold text-secondary">Email:</label>
+                        <input type="email" name="email" class="form-control" placeholder="name@example.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold text-secondary">Course:</label>
+                        <select name="course" class="form-select" required>
+                            <option value="" disabled selected>Select course</option>
+                            <option value="MCA">MCA</option>
+                            <option value="BTech">B.Tech</option>
+                            <option value="BCA">BCA</option>
+                            <option value="MBA">MBA</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold text-secondary d-block">Gender:</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="male" value="Male" required>
+                            <label class="form-check-label" for="male">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+                            <label class="form-check-label" for="female">Female</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Submit & View Directory</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

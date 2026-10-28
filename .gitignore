@@ -1,0 +1,18 @@
+# Eclipse IDE files
+.settings/
+.project
+.classpath
+
+# Compiled class files & build folders
+bin/
+build/
+target/
+*.class
+
+# Tomcat temp / work directories
+wtpwebapps/
+work/
+
+# OS generated files
+.DS_Store
+Thumbs.db
